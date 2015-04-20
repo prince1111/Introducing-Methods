@@ -54,7 +54,54 @@ It should take a String as input and return the first word of that String, using
 
 Then modify your main program so that after it reports how many words are in your String it also reports what the first word of your input String is.
 
+## Exercise 2 Sample Output
 
+This is a sample transcript of what your program should do. 
+
+> Enter a string: The quick brown fox jumped
+Your string has 5 words in it.
+The first word is: The
+
+If there is only one word in your `String`, make sure that your program identifies it correctly:
+
+> Enter a string: One
+Your string has 1 words in it.
+The first word is: One
+
+If the user enters an empty String, the code should report an error as it did in Exercise 1:
+
+> Enter a string: 
+ERROR - string must not be empty.
+
+> Enter a string: Four score and seven years ago
+Your string has 6 words in it.
+The first word is: Four
+
+Next, [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 2."
+
+## Exercise 3 Description
+
+Write a new method `getWord()` that uses this method header:
+
+```java
+private static String getWord(String input, int n)
+```
+
+This method should act just like `getFirstWord()` did in Exercise 2 above, except that instead of returning the first word, it returns the nth word in the string, with the first word as word 0, the second word as word 1, etc. For example the following code:
+
+```java
+String myString = getWord("the quick brown fox jumped", 3);
+```
+
+should result in the variable myString taking on the value of "fox".  If the requested index is out of bounds your method should return an empty String "".
+
+Modfiy your main loop to use this new method and allow the user to pick an arbitrary word to extract from your input String.
+
+Finally: 
+1. [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 3."
+2. [**Push**][ref-push]/sync the changes up to GitHub.
+3. [Create a **pull request**][pull-request] on the original repository to turn in the assignment.
+4. Submit, in Blackboard, your GitHub username.
 
 <!-- Links -->
 [create-repo]: https://help.github.com/articles/create-a-repo
