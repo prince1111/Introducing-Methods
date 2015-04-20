@@ -25,10 +25,10 @@ These exercises will allow you to write some programs structured using simple fu
 You will be writing a simple Java program that counts the words in a String. A "skeleton" of this code is provided in the file you cloned.  You will see that there are three methods declared in this file with no code provided.  You must fill in the appropriate code.  Pay close attention to what each method should be doing based on the information given in the comments before the method.
 
 ## Exercise 1 Sample Output
-This is a sample transcript of what your program should do.  Text in bold is expected input from the user rather than output from the program.
+This is a sample transcript of what your program should do.  Text in bold is expected input from the user rather than output from the program:
 
->Enter a string: **the quick brown fox jumped**
->Your string has 5 words in it.
+  Enter a string: **the quick brown fox jumped**
+  Your string has 5 words in it.
 
 If you provide an empty string, your program should report an error until the user enters a non-empty string:
 
