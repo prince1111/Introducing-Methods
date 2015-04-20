@@ -17,6 +17,43 @@ These exercises will allow you to write some programs structured using simple fu
   - Competency with writing computer programs to implement given simple algorithms
   - Familiarity with designing simple text-oriented user interfaces
 
+## Overall Instructions.
+1. To start, [**fork** this repository][forking].
+2. [**Clone**][ref-clone] the repository to your computer.
+ 
+## Exercise 1 Description
+You will be writing a simple Java program that counts the words in a String. A "skeleton" of this code is provided in the file you cloned.  You will see that there are three methods declared in this file with no code provided.  You must fill in the appropriate code.  Pay close attention to what each method should be doing based on the information given in the comments before the method.
+
+## Exercise 1 Sample Output
+This is a sample transcript of what your program should do.  Text in bold is expected input from the user rather than output from the program.
+
+>Enter a string: **the quick brown fox jumped**
+>Your string has 5 words in it.
+
+If you provide an empty string, your program should report an error until the user enters a non-empty string:
+
+>Enter a string: 
+>ERROR - string must not be empty.
+
+>Enter a string: **A man, a plan, a canal; Panama**
+>Your string has 7 words in it.
+
+**NOTE**:  As described in the comments in the skeleton file, you may assume that words will have exactly one space between them.
+
+Next, [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 1."
+
+## Exercise 2 Description
+
+For this exercise, you should extend the code that you wrote in Exercise 1 with a new method.  This new method should use the following method header:
+
+```java
+private static String getFirstWord(String input)
+```
+
+It should take a String as input and return the first word of that String, using the definition of a word given in Exercise 1.  If the String is empty, it should return the empty string.
+
+Then modify your main program so that after it reports how many words are in your String it also reports what the first word of your input String is.
+
 
 
 <!-- Links -->
