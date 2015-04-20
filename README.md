@@ -27,20 +27,24 @@ You will be writing a simple Java program that counts the words in a String. A "
 ## Exercise 1 Sample Output
 This is a sample transcript of what your program should do.  Text in bold is expected input from the user rather than output from the program:
 
-  Enter a string: **the quick brown fox jumped**
-  Your string has 5 words in it.
+<pre>
+Enter a string: <b>the quick brown fox jumped</b>
+Your string has 5 words in it.
+</pre>
 
 If you provide an empty string, your program should report an error until the user enters a non-empty string:
 
->Enter a string: 
->ERROR - string must not be empty.
+<pre>
+Enter a string: 
+ERROR - string must not be empty.
 
->Enter a string: **A man, a plan, a canal; Panama**
->Your string has 7 words in it.
+Enter a string: <b>A man, a plan, a canal; Panama</b>
+Your string has 7 words in it.
+</pre>
 
 **NOTE**:  As described in the comments in the skeleton file, you may assume that words will have exactly one space between them.
 
-Next, [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 1."
+Next, [**commit**][ref-commit] your changes. Use the commit message "Finish exercise 1."
 
 ## Exercise 2 Description
 
@@ -50,34 +54,40 @@ For this exercise, you should extend the code that you wrote in Exercise 1 with 
 private static String getFirstWord(String input)
 ```
 
-It should take a String as input and return the first word of that String, using the definition of a word given in Exercise 1.  If the String is empty, it should return the empty string.
+It should take a String as input and return the first word of that String, using the definition of a word given in Exercise 1.  If the `String` is empty, it should return the empty string.
 
-Then modify your main program so that after it reports how many words are in your String it also reports what the first word of your input String is.
+Then modify your main program so that after it reports how many words are in your `String` it also reports what the first word of your input `String` is.
 
 ## Exercise 2 Sample Output
 
 This is a sample transcript of what your program should do. 
 
-> Enter a string: The quick brown fox jumped
+<pre>
+Enter a string: <b>The quick brown fox jumped</b>
 Your string has 5 words in it.
 The first word is: The
+</pre>
 
 If there is only one word in your `String`, make sure that your program identifies it correctly:
 
-> Enter a string: One
+<pre>
+Enter a string: <b>One</b>
 Your string has 1 words in it.
 The first word is: One
+</pre>
 
-If the user enters an empty String, the code should report an error as it did in Exercise 1:
+If the user enters an empty `String`, the code should report an error as it did in Exercise 1:
 
-> Enter a string: 
+<pre>
+Enter a string: 
 ERROR - string must not be empty.
 
-> Enter a string: Four score and seven years ago
+Enter a string: <b>Four score and seven years ago</b>
 Your string has 6 words in it.
 The first word is: Four
+</pre>
 
-Next, [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 2."
+Next, [**commit**][ref-commit] your changes. Use the commit message "Finish exercise 2."
 
 ## Exercise 3 Description
 
@@ -93,9 +103,9 @@ This method should act just like `getFirstWord()` did in Exercise 2 above, excep
 String myString = getWord("the quick brown fox jumped", 3);
 ```
 
-should result in the variable myString taking on the value of "fox".  If the requested index is out of bounds your method should return an empty String "".
+should result in the variable myString taking on the value of "fox".  If the requested index is out of bounds your method should return an empty `String` "".
 
-Modfiy your main loop to use this new method and allow the user to pick an arbitrary word to extract from your input String.
+Modfiy your main loop to use this new method and allow the user to pick an arbitrary word to extract from your input `String`.
 
 Finally: 
 1. [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 3."
