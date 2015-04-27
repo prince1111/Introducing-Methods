@@ -1,5 +1,7 @@
 # Introducing Methods
 
+For this assignment, you are allowed to work in **pairs** if you wish. You **must** sign up for a group in Blackboard even if you are in a group of one.
+
 ## Overview
 These exercises will allow you to write some programs structured using simple functions and procedures.
 
