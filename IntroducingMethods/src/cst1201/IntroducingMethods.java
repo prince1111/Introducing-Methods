@@ -11,14 +11,17 @@ import java.util.stream.IntStream;
 public class IntroducingMethods {
 
 	public static void main(String[] args) {
-		//get input from the user.
+		//get inputFromUser from the user.
 		Scanner scanner = new Scanner(System.in);
-		String input = getInputString(scanner);
+		String inputFromUser = getInputString(scanner);
 
 		//get the number of words in the string.
-		int count = getWordCount(input);
-
+		int count = getWordCount(inputFromUser);
 		System.out.println("Your string has " + count + " words in it.");
+
+		//get the first word.
+		String firstWord = getFirstWord(inputFromUser);
+		System.out.println("The first word is: " + firstWord);
 	}
 
 	/**
@@ -78,6 +81,26 @@ public class IntroducingMethods {
 
 			//return the count of characters in the stream plus 1.
 			return (int) onlySpaces.count() + 1;
+		}
+	}
+
+	/**
+	 * Given a string, returns the first "word" in the string as defined in
+	 * exercise #1. If the string is empty, the empty string is returned.
+	 *
+	 * @param input The string in question.
+	 * @return The first "word" in input, as defined by exercise #1, or
+	 * empty string if input is empty.
+	 */
+	public static String getFirstWord(String input) {
+		if (input.isEmpty())
+			return input; //input is empty.
+		else {
+			//find the position of the first space in input.
+			int pos = input.indexOf(' ');
+
+			//return a substring from [0,pos).
+			return input.substring(0, pos);
 		}
 	}
 }
