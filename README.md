@@ -109,7 +109,8 @@ should result in the variable myString taking on the value of "fox".  If the req
 
 Modfiy your main loop to use this new method and allow the user to pick an arbitrary word to extract from your input `String`.
 
-Finally: 
+Finally:
+
 1. [**Commit**][ref-commit] your changes. Use the commit message "Finish exercise 3."
 2. [**Push**][ref-push]/sync the changes up to GitHub.
 3. [Create a **pull request**][pull-request] on the original repository to turn in the assignment.
