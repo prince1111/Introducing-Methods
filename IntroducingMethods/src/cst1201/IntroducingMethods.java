@@ -1,7 +1,7 @@
 package cst1201;
 
 import java.util.Scanner;
-import java.util.stream.IntStream;
+import java.util.StringTokenizer;
 
 /**
  * TODO: Description of your class.
@@ -19,9 +19,22 @@ public class IntroducingMethods {
 		int count = getWordCount(inputFromUser);
 		System.out.println("Your string has " + count + " words in it.");
 
-		//get the first word.
+		//get the first word if it exists.
 		String firstWord = getFirstWord(inputFromUser);
-		System.out.println("The first word is: " + firstWord);
+
+		if (!firstWord.isEmpty())
+			System.out.println("The first word is: " + firstWord);
+
+		//get the nth word if it exists.
+		System.out.print("Enter the number of the word to retrieve: ");
+		int n = scanner.nextInt();
+
+		String nthWord = getWord(inputFromUser, n);
+
+		if (nthWord.isEmpty())
+			System.err.println("That word does not exist.");
+		else
+			System.out.println("The word is: " + nthWord);
 	}
 
 	/**
@@ -66,22 +79,12 @@ public class IntroducingMethods {
 	 * a single space.
 	 */
 	public static int getWordCount(String input) {
-		//For this assignment, we can assume that a single space separates words.
-		//As such, we can simply return 1 + the number of spaces, as long
-		//as the string is non-empty.
-
-		if (input.isEmpty())
-			return 0; //no words in an empty string.
-		else {
-			//first, convert the string to a stream of characters.
-			IntStream charStream = input.chars();
-
-			//next, filter the stream to only space characters.
-			IntStream onlySpaces = charStream.filter(Character::isSpaceChar);
-
-			//return the count of characters in the stream plus 1.
-			return (int) onlySpaces.count() + 1;
-		}
+		//break the string into "tokens" separated by space. Each of
+		//these tokens will be a word.
+		StringTokenizer st = new StringTokenizer(input, " ");
+		
+		//return the count of words.
+		return st.countTokens();
 	}
 
 	/**
@@ -93,18 +96,44 @@ public class IntroducingMethods {
 	 * empty string if input is empty.
 	 */
 	public static String getFirstWord(String input) {
-		if (input.isEmpty())
-			return input; //input is empty.
-		else {
-			//find the position of the first space in input.
-			int pos = input.indexOf(' ');
+		StringTokenizer st = new StringTokenizer(input, " ");
 
-			//if there are no spaces, then there is only one word.
-			if (pos == -1)
-				return input; //the only word is the first word.
+		//if we have at least one word.
+		if (st.hasMoreTokens())
+			//return the first word.
+			return st.nextToken();
+		else //otherwise.
+			//return the empty string.
+			return "";
+	}
 
-			//return a substring from [0,pos).
-			return input.substring(0, pos);
+	/**
+	 * Returns the nth word in input. If it doesn't exist, empty string is
+	 * returned.
+	 *
+	 * @param input The string in question.
+	 * @param n The index of the word the retrieve starting from 0.
+	 * @return The nth word input if it exists and empty string otherwise.
+	 */
+	public static String getWord(String input, int n) {
+		StringTokenizer st = new StringTokenizer(input, " ");
+		int curr = 0; //the current index
+
+		//while there are more words.
+		while (st.hasMoreTokens()) {
+			//get the next word.
+			String word = st.nextToken();
+			
+			//if the current index is at the desired index.
+			if (curr == n)
+				//return the current word.
+				return word;
+			else //otherwise.
+				//keep going.
+				curr++;
 		}
+
+		//if we are here, we must have been out-of-bounds.
+		return "";
 	}
 }
