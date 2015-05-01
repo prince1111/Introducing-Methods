@@ -86,8 +86,13 @@ public class IntroducingMethodsTest {
 		result = IntroducingMethods.getFirstWord(input);
 		assertEquals(expResult, result);
 		
-		input = "A man, a plan, a canal; Panama";
-		expResult = "A";
+		input = "One";
+		expResult = input;
+		result = IntroducingMethods.getFirstWord(input);
+		assertEquals(expResult, result);
+		
+		input = "O";
+		expResult = input;
 		result = IntroducingMethods.getFirstWord(input);
 		assertEquals(expResult, result);
 	}

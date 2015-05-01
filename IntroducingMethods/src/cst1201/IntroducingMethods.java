@@ -99,6 +99,10 @@ public class IntroducingMethods {
 			//find the position of the first space in input.
 			int pos = input.indexOf(' ');
 
+			//if there are no spaces, then there is only one word.
+			if (pos == -1)
+				return input; //the only word is the first word.
+
 			//return a substring from [0,pos).
 			return input.substring(0, pos);
 		}
